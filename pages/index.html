@@ -10,18 +10,24 @@
     <script src="https://code.jquery.com/jquery-migrate-3.4.1.js" integrity="sha256-CfQXwuZDtzbBnpa5nhZmga8QAumxkrhOToWweU52T38=" crossorigin="anonymous"></script>
 </head>
 <body class="vh-100 position-relative bg-secondary">
-    <div class="container bg-secondary d-flex flex-column bg-white shadow-lg rounded position-absolute top-50 start-50 translate-middle p-3" style="height: 800px; max-width: 1000px;">
+    <div class="container bg-secondary d-flex flex-column bg-white shadow-lg rounded position-absolute top-50 start-50 translate-middle p-3" style="max-height: 800px; width: fit-content; max-width: 1000px">
         <h1 class="title text-center w-100">Contact Digitalizer</h1>
         <div class="images mx-auto d-flex flex-column shadow-lg overflow-auto">
-            <div class="header d-flex justify-content-between p-2">
+            <div class="header d-flex justify-content-between p-2 bg-primary d-none">
                 <i class="prev-image bi bi-arrow-left d-none" style="font-size: 2em;"></i>
-                <h2 class="image-name text-center"></h2>
+                <h2 class="image-name text-center w-100 text-white"></h2>
                 <i class="next-image bi bi-arrow-right d-none" style="font-size: 2em;"></i>
             </div>
             <img src="" class="img-fluid image" style="max-height: 600px; max-width: fit-content;" alt="">
         </div>
         <input type="file" class="mx-auto mt-3 mb-2 bg-primary p-2 rounded text-white" accept="image/*" id="file-insert" multiple>
-        <button type="button" class="send-images btn btn-primary mx-auto my-2" style="width: fit-content;">GET DETECTIONS</button>
+        <button type="button" class="send-images btn btn-primary mx-auto my-2" style="width: fit-content;">DETECTAR</button>
+    </div>
+    <div class="dark-bg h-100 w-100 bg-black position-absolute bg-opacity-75 d-none"></div>
+    <div class="detections bg-white rounded position-absolute top-50 start-50 translate-middle p-3 d-none flex-column align-items-center" style="width: 400px;">
+        <h1 class="border-bottom border-secondary text-center w-100">Contacts</h1>
+        <div class="content text-center"></div>
+        <button type="button" class="close-box btn btn-primary mx-auto my-2" style="width: fit-content;">SAIR</button>
     </div>
 
     <script type="module" src="../main.js"></script>
